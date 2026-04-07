@@ -154,7 +154,6 @@ function Env(t, s) {
         }
 
         log(content) {
-
             this.notifyStr.push(`[${this.time("HH:mm:ss")}]` + " " + this.toStr(content))
             console.log(content)
         }
@@ -180,6 +179,7 @@ function Env(t, s) {
                 ck.split(/;\s*/).filter(v => v.includes("=")).map(v => [v.slice(0, v.indexOf("=")), v.slice(v.indexOf("=") + 1)])
             );
         }
+
     })(t, s);
 }
 module.exports = {
