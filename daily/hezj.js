@@ -6,7 +6,7 @@
 cron: 30 7 * * *
 ------------------------------------------
 #Notice:   
-变量名hrzj
+变量名hezj
 抓取https://zjrs.haier.net请求头accounttoken 多账户&或换行
 
 ⚠️【免责声明】
