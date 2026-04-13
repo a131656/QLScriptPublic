@@ -158,8 +158,14 @@ class Task {
 !(async () => {
     await getNotice()
     $.checkEnv(ckName);
-    if (process.env['wx_server_url'] && process.env['wx_auth'] && process.env['wx_app'].indexOf(ckName) !== -1 && process.env['wx_app'].indexOf(ckName) !== -1) {
+    if (process.env['wx_server_url'] && process.env['wx_auth'] && process.env['wx_app'].indexOf(ckName) !== -1) {
         $.userList = ['test']
+    } else {
+        $.log(`${ckName}未配置微信SERVER配置 搭建可看仓库目录下的readme.md❌`)
+
+    } else {
+        $.log(`${ckName}未配置微信SERVER配置 搭建可看仓库目录下的readme.md❌`)
+
     }
     for (let user of $.userList) {
         await new Task(user).run();
